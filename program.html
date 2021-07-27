@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winner</title>
+    <script type="text/javascript">
+     function fetchwinner(){
+         var results=[];
+        competitions = [
+
+                        ["C#", "HTML"],
+                        ["HTML", "Python"],
+                        ["Python", "C#"]
+                     ];
+        score= [
+                        [78, 89],
+                        [89, 90],
+                        [83, 81]
+            ];
+
+                     //document.write(competitions[0][1]);
+                     //alert("ranja");
+
+                     for(var i=0;i<competitions.length;i++){
+                        if(score[i][0]>score[i][1]){
+                            results[i]=competitions[i][0];
+                            //alert(competitions[i][1]);
+                        }
+                        else{
+                            results[i]=competitions[i][1];
+                            //alert(competitions[i][0]);
+                        }
+                     }
+
+                     alert(results);
+
+     }
+    </script>
+   
+</head>
+<body>
+    <input type="button" onclick="fetchwinner()" value="click">
+</body>
+</html>
